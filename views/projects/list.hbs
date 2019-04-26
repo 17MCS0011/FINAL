@@ -1,0 +1,23 @@
+<h3><a class="btn btn-secondary" href="/projects"><i class="fa fa-plus"></i> Create New</a> Projects</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Project Manager</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.projectManager}}</td>
+            <td><a class="btn btn-secondary" href="/projects/viewproject/{{this._id}}"><i class="fa fa-list-alt"></i> View </a></td>
+            <td>
+                <a href="/projects/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/projects/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

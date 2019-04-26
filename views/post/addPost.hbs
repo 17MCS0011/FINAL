@@ -1,0 +1,24 @@
+
+<h3>
+    {{viewTitle}}
+</h3>
+
+<form action="/post" method="POST" autocomplete="off">
+   <input type="hidden" name="_id" value="{{project._id}}">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" name="title" placeholder="Title" value="{{post.title}}">
+            <div class="text-danger">{{post.titleError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control" name="description" placeholder="Enter Description" value="{{post.description}}"></textarea>
+           <div class="text-danger">{{post.descriptionError}}</div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        <a class="btn btn-secondary" href="/postList"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
+<script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

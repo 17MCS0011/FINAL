@@ -1,0 +1,23 @@
+<h3>
+    {{viewTitle}}
+</h3>
+
+<form action="/projects" method="POST" autocomplete="off">
+   <input type="hidden" name="_id" value="{{project._id}}">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" name="title" placeholder="Title" value="{{project.title}}">
+    </div>
+    <div class="form-group">
+        <label>Project Manager</label>
+        <input type="text" class="form-control" name="projectManager" placeholder="Project Manager" value="{{project.projectManager}}">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea rows="5" class="form-control" name="description" placeholder="Description" value="{{project.description}}"></textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        <a class="btn btn-secondary" href="/projects/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

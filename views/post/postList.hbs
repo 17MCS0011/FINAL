@@ -1,0 +1,15 @@
+<h3><a class="btn btn-secondary" href="/post"><i class="fa fa-plus"></i> Create New</a> Post</h3>
+{{#each post}}
+<div class="row">
+    <div class="grid-container" >
+        <div class="thumbnail">
+           <div class="grid-item">
+                <h3>{{this.title}}</h3>
+                <p class="description">{{this.description}}</p>
+                 <a href="/post/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/post/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+           </div>
+        </div>
+    </div>
+</div>
+  {{/each}}
